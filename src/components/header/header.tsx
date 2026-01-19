@@ -3,15 +3,15 @@
 import Menu from "../menu/menu";
 import useMenu from "../../hooks/useMenu";
 import { MENU_ITEMS } from "../../config/main-menu";
-import { type MenuItemType } from "../../types/menu";
+// import { type MenuItemType } from "../../types/menu";
 
 export default function Header() {
   // const navigate = useNavigate();
   const { menuItems } = useMenu(MENU_ITEMS);
 
-  const handleMenuItemClick = (item: MenuItemType) => {
-    // Можно добавить дополнительную логику
-  };
+  // const handleMenuItemClick = (item: MenuItemType) => {
+  //   // Можно добавить дополнительную логику
+  // };
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function Header() {
         <Menu
           items={menuItems}
           orientation="horizontal"
-          onItemClick={handleMenuItemClick}
+          // onItemClick={handleMenuItemClick}
           className="menu--main"
         />
       </header>

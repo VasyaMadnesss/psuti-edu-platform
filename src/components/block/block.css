@@ -1,0 +1,84 @@
+.block {
+  --block-bg: #ffffff;
+  --block-border: #e5e7eb;
+  --block-text: #1f2937;
+  --block-radius: 10px;
+  --block-padding: 1.5rem;
+  --block-gap: 1rem;
+  --block-accent: #1e3a8a;
+
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: stretch;
+}
+
+/* ===== TYPE MODIFIERS ===== */
+.block--transparent {
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.block--filled {
+  background: var(--block-bg);
+  border: 1px solid var(--border-color, var(--block-border));
+  border-radius: var(--block-radius);
+  padding: var(--block-padding);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.block--filled:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+/* ===== ORIENTATION MODIFIERS ===== */
+.block--vertical {
+  display: flex;
+  flex-direction: column;
+  gap: var(--block-gap);
+}
+
+.block--horizontal {
+  display: flex;
+  align-items: center;
+  gap: var(--block-gap);
+}
+
+/* ИЗМЕНЕНИЕ: Добавляем поддержку меню внутри блока */
+/* Если меню внутри вертикального блока, делаем его вертикальным */
+.block--vertical .menu__list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+/* Если меню внутри горизонтального блока, делаем его горизонтальным */
+.block--horizontal .menu__list {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 2rem !important;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .block {
+    --block-padding: 1.25rem;
+    --block-gap: 0.875rem;
+  }
+
+  .block--horizontal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .block {
+    --block-padding: 1rem;
+  }
+
+  .block--filled {
+    border-radius: 8px;
+  }
+}
