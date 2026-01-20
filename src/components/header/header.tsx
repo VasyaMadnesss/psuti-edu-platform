@@ -3,6 +3,7 @@
 import Menu from "../menu/menu";
 import useMenu from "../../hooks/useMenu";
 import { MENU_ITEMS } from "../../config/main-menu";
+import Block from "../block/block";
 // import { type MenuItemType } from "../../types/menu";
 
 export default function Header() {
@@ -16,7 +17,20 @@ export default function Header() {
   return (
     <>
       <header>
-        <h1 className="header__title">PSUTI Educational Platform</h1>
+        <Block
+          innerOrientation="horizontal"
+          type="transparent"
+          style={{ alignItems: "center" }}
+        >
+          <img
+            src="https://www.psuti.ru/sites/default/files/field/attachments/2024/04/logo_pguti_blue.svg"
+            style={{
+              height: "70px",
+              width: "auto",
+            }}
+          ></img>
+          <h1 className="header__title">Educational Platform</h1>
+        </Block>
         <Menu
           items={menuItems}
           orientation="horizontal"

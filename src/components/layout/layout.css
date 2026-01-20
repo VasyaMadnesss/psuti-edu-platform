@@ -6,9 +6,9 @@
 }
 
 :root {
-  --primary-color: #1e3a8a;
-  --primary-light: #3b82f6;
-  --primary-lighter: #dbeafe;
+  --primary-color: #1e6ab5;
+  --primary-light: #1e82ca;
+  --primary-lighter: #ddf2fa;
   --text-primary: #1f2937;
   --text-secondary: #6b7280;
   --background: #f9fafb;
@@ -153,7 +153,7 @@ header {
   white-space: nowrap;
 }
 
-.header__title::before {
+/* .header__title::before {
   content: '';
   position: absolute;
   left: 0;
@@ -163,7 +163,7 @@ header {
   height: 70%;
   background: var(--primary-color);
   border-radius: 2px;
-}
+} */
 
 /* ===== MENU ===== */
 .menu--horizontal {
